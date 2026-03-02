@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check device type for logging/analytics
     const isMobile = window.innerWidth < 1024;
     console.log(`Mode: ${isMobile ? 'Mobile App' : 'Desktop Experience'}`);
+
     // --- Lamborghini Lottie Animation ---
     const initLottie = () => {
         const lottieLib = window.lottie || window.bodymovin;
@@ -16,51 +17,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const lottiePath = 'assets/lottie/Lamborghini.json';
+        const isCurrentlyMobile = window.innerWidth < 1024;
 
-        // Initialize Mobile Animation (Lazy Load)
-        const lottieMobile = document.getElementById('lottie-lamborghini');
-        if (lottieMobile && isMobile) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        try {
-                            lottieLib.loadAnimation({
-                                container: lottieMobile,
-                                renderer: 'svg',
-                                loop: true,
-                                autoplay: true,
-                                path: lottiePath
-                            });
-                            console.log('Mobile Lottie lazy-initialized');
-                            observer.unobserve(lottieMobile);
-                        } catch (err) {
-                            console.error('Mobile Lottie Error:', err);
+        // Shared observer to trigger animations on viewport entry
+        const lottieObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const container = entry.target;
+                    try {
+                        const animConfig = {
+                            container: container,
+                            renderer: 'svg',
+                            loop: true,
+                            autoplay: true
+                        };
+
+                        // Use pre-loaded data if available (fixes file:// protocol issues)
+                        if (typeof lamborghiniAnimationData !== 'undefined') {
+                            animConfig.animationData = lamborghiniAnimationData;
+                        } else {
+                            animConfig.path = lottiePath;
                         }
+
+                        const anim = lottieLib.loadAnimation(animConfig);
+
+                        // Force play if needed
+                        anim.play();
+
+                        console.log(`${container.id} Lottie lazy-initialized`);
+                        lottieObserver.unobserve(container);
+                    } catch (err) {
+                        console.error(`${container.id} Lottie Error:`, err);
                     }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(lottieMobile);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Initialize Mobile Target
+        const lottieMobile = document.getElementById('lottie-lamborghini');
+        if (lottieMobile && isCurrentlyMobile) {
+            lottieObserver.observe(lottieMobile);
         }
 
-        // Initialize Desktop Animation
+        // Initialize Desktop Target
         const lottieDesktop = document.getElementById('lottie-lamborghini-desktop');
-        if (lottieDesktop && !isMobile) {
-            try {
-                lottieLib.loadAnimation({
-                    container: lottieDesktop,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: lottiePath
-                });
-                console.log('Desktop Lottie initialized');
-            } catch (err) {
-                console.error('Desktop Lottie Error:', err);
-            }
+        if (lottieDesktop && !isCurrentlyMobile) {
+            lottieObserver.observe(lottieDesktop);
         }
     };
 
     initLottie();
+
 
 
     // --- Desktop Navbar Scroll Effect ---
@@ -83,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Only handle active state changes if it's an anchor link (hash)
             // If it's a real page link like services.html, let the browser handle it
             const href = this.getAttribute('href');
-            if(href && href.startsWith('#')) {
+            if (href && href.startsWith('#')) {
                 // Remove active class from all
                 navItems.forEach(nav => nav.classList.remove('active'));
-    
+
                 // Add to clicked
                 this.classList.add('active');
             }
