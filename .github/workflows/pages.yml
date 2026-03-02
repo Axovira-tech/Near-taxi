@@ -28,7 +28,7 @@ jobs:
           shopt -s nullglob
           html_files=(*.html)
           if [ ${#html_files[@]} -gt 0 ]; then
-            cp -r "${html_files[@]}" _site/
+            cp "${html_files[@]}" _site/
           fi
           for path in assets css js; do
             if [ -e "$path" ]; then
