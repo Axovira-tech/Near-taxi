@@ -66,19 +66,19 @@
                     </a>
                     <a href="about.html">
                         <div class="link-icon"><i class="ph-fill ph-info"></i></div>
-                        <span>About Us</span>
+                        <span>About us</span>
                     </a>
                     <a href="services.html">
                         <div class="link-icon"><i class="ph-fill ph-grid-four"></i></div>
-                        <span>Our Services</span>
+                        <span>Services</span>
                     </a>
                     <a href="tours.html" class="active">
                         <div class="link-icon"><i class="ph-fill ph-map-trifold"></i></div>
-                        <span>Goa Tours</span>
+                        <span>popular tours</span>
                     </a>
                     <a href="contact.html">
                         <div class="link-icon"><i class="ph-fill ph-envelope-simple-open"></i></div>
-                        <span>Contact Us</span>
+                        <span>contact us</span>
                     </a>
                     <!-- <a href="#testimonials">
                         <div class="link-icon"><i class="ph-fill ph-chat-circle-dots"></i></div>
@@ -100,236 +100,351 @@
             </div>
         </div>
 
-        <section class="container" style="padding-top: 100px; padding-bottom: 120px;">
-
-            <h1 style="color: var(--color-text-main); font-size: 2rem; margin-bottom: 24px;">Discover Goa's <span
-                    class="text-accent">Hidden Gems</span>
-            </h1>
-            <p style="color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 30px;">Professional guided tours
-                with knowledgeable local drivers
-                to make your trip memorable.</p>
-
-            <!-- Category Tabs -->
+        <!-- Synchronized Popular Tours Content (Mobile Overhaul) -->
+        <section style="padding: 100px 24px 60px; background: #FFFFFF; position: relative; overflow: hidden;">
+            <!-- Subtle Background Glow -->
             <div
-                style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 20px; margin-bottom: 20px; -webkit-overflow-scrolling: touch;">
-                <span
-                    style="background: var(--color-primary); color: #000; padding: 8px 20px; border-radius: 20px; font-weight: 700; white-space: nowrap; font-size: 0.9rem;">Full
-                    Day Tours</span>
-                <span
-                    style="background: var(--color-surface); color: var(--color-text-muted); padding: 8px 20px; border-radius: 20px; font-weight: 600; white-space: nowrap; font-size: 0.9rem; border: 1px solid var(--color-border);">Popular
-                    Spots</span>
+                style="position: absolute; top: -50px; left: -50px; width: 250px; height: 250px; background: rgba(255, 215, 0, 0.05); filter: blur(100px); border-radius: 50%;">
             </div>
 
-            <!-- North Goa Tour Card -->
-            <div
-                style="background: var(--color-surface); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <img src="assets/baga.png" alt="North Goa" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 24px;">
-                    <h3 style="color: var(--color-heading); margin-bottom: 8px;">North Goa Sightseeing</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 16px;">Baga, Calangute,
-                        Anjuna, Vagator Beaches & Aguada Fort.</p>
-                    <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-main);">Best Price
-                        </span>
-                        <a href="https://wa.me/917058260493" class="btn btn-primary"
-                            style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
+            <!-- Header Section -->
+            <div data-aos="fade-up" style="margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                    <span style="width: 32px; height: 2px; background: #FFD700; border-radius: 2px;"></span>
+                    <span
+                        style="font-size: 0.7rem; font-weight: 800; color: #111827; text-transform: uppercase; letter-spacing: 2px;">Explore
+                        Goa</span>
+                </div>
+
+                <h1
+                    style="font-size: 2.2rem; color: #111827; line-height: 1.15; margin-bottom: 20px; font-weight: 900; letter-spacing: -0.5px;">
+                    Discover Goa's <br><span class="text-accent" style="color: var(--color-primary);">Hidden Gems</span>
+                </h1>
+
+                <p style="font-size: 0.95rem; color: #64748B; line-height: 1.6; font-weight: 500;">
+                    Professional guided tours with knowledgeable local drivers to make your trip truly memorable.
+                </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <!-- Tour 1 -->
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #F1F5F9; position: relative;"
+                    data-aos="fade-up">
+                    <div style="position: relative; height: 200px;">
+                        <img src="assets/baga.png" alt="North Goa"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <!-- Gradient Overlay -->
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.4), transparent 40%); pointer-events: none;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 16px; left: 16px; background: #FFD700; color: #111827; padding: 6px 14px; border-radius: 12px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 6px;">
+                            <i class="ph-bold ph-star" style="font-size: 0.8rem;"></i> Top Rated
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 800; color: #111827; margin-bottom: 10px;">North Goa
+                            Sightseeing</h3>
+                        <p style="color: #64748B; font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px;">Explore
+                            Baga, Calangute, Anjuna, Vagator Beaches & the historic Aguada Fort.</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #F1F5F9;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span
+                                    style="font-size: 0.7rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Starting
+                                    from</span>
+                                <span style="font-weight: 800; font-size: 1rem; color: #111827;">Best Price</span>
+                            </div>
+                            <a href="https://wa.me/917058260493"
+                                style="background: #111827; color: #FFFFFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;">
+                                Book <i class="ph ph-arrow-right" style="color: #FFD700;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #F1F5F9; position: relative;"
+                    data-aos="fade-up">
+                    <div style="position: relative; height: 200px;">
+                        <img src="assets/basilica.png" alt="South Goa"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.4), transparent 40%); pointer-events: none;">
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 800; color: #111827; margin-bottom: 10px;">South Goa
+                            Heritage</h3>
+                        <p style="color: #64748B; font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px;">Experience
+                            Old Goa Churches, Temples, Dona Paula & the scenic Miramar.</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #F1F5F9;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span
+                                    style="font-size: 0.7rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Starting
+                                    from</span>
+                                <span style="font-weight: 800; font-size: 1rem; color: #111827;">Best Price</span>
+                            </div>
+                            <a href="https://wa.me/917058260493"
+                                style="background: #111827; color: #FFFFFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;">
+                                Book <i class="ph ph-arrow-right" style="color: #FFD700;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #F1F5F9; position: relative;"
+                    data-aos="fade-up">
+                    <div style="position: relative; height: 200px;">
+                        <img src="assets/panjim.png" alt="Panjim" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.4), transparent 40%); pointer-events: none;">
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 800; color: #111827; margin-bottom: 10px;">Heritage
+                            Panjim</h3>
+                        <p style="color: #64748B; font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px;">Wander
+                            through Fontainhas (Latin Quarter), Panjim Church & Altinho hills.</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #F1F5F9;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span
+                                    style="font-size: 0.7rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Starting
+                                    from</span>
+                                <span style="font-weight: 800; font-size: 1rem; color: #111827;">Best Price</span>
+                            </div>
+                            <a href="https://wa.me/917058260493"
+                                style="background: #111827; color: #FFFFFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;">
+                                Book <i class="ph ph-arrow-right" style="color: #FFD700;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 4 -->
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #F1F5F9; position: relative;"
+                    data-aos="fade-up">
+                    <div style="position: relative; height: 200px;">
+                        <img src="assets/dudhsagar.png" alt="Dudhsagar"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.4), transparent 40%); pointer-events: none;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 16px; left: 16px; background: #3B82F6; color: white; padding: 6px 14px; border-radius: 12px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 6px;">
+                            <i class="ph-bold ph-compass" style="font-size: 0.8rem;"></i> Adventurous
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 800; color: #111827; margin-bottom: 10px;">Dudhsagar
+                            Expedition</h3>
+                        <p style="color: #64748B; font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px;">A
+                            thrilling Jeep Safari, waterfall entry & a visit to the local Spice Plantation.</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #F1F5F9;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span
+                                    style="font-size: 0.7rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Starting
+                                    from</span>
+                                <span style="font-weight: 800; font-size: 1rem; color: #111827;">Best Price</span>
+                            </div>
+                            <a href="https://wa.me/917058260493"
+                                style="background: #111827; color: #FFFFFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;">
+                                Book <i class="ph ph-arrow-right" style="color: #FFD700;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 5 -->
+                <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border: 1px solid #F1F5F9; position: relative;"
+                    data-aos="fade-up">
+                    <div style="position: relative; height: 200px;">
+                        <img src="assets/vagator.png" alt="Vagator"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.4), transparent 40%); pointer-events: none;">
+                        </div>
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 800; color: #111827; margin-bottom: 10px;">Vagator &
+                            Chapora Fort</h3>
+                        <p style="color: #64748B; font-size: 0.85rem; line-height: 1.6; margin-bottom: 20px;">Iconic
+                            fort sunsets, beautiful red cliffs, and stunning beach views.</p>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #F1F5F9;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span
+                                    style="font-size: 0.7rem; color: #94A3B8; font-weight: 700; text-transform: uppercase;">Starting
+                                    from</span>
+                                <span style="font-weight: 800; font-size: 1rem; color: #111827;">Best Price</span>
+                            </div>
+                            <a href="https://wa.me/917058260493"
+                                style="background: #111827; color: #FFFFFF; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;">
+                                Book <i class="ph ph-arrow-right" style="color: #FFD700;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- South Goa Tour Card -->
-            <div
-                style="background: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <img src="assets/basilica.png" alt="South Goa" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 24px;">
-                    <h3 style="color: #000; margin-bottom: 8px;">South Goa Heritage</h3>
-                    <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 16px;">Old Goa Churches, Temples, Dona
-                        Paula & Miramar.</p>
-                    <hr style="border: 0; border-top: 1px solid #F3F4F6; margin: 20px 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: 700; font-size: 1.1rem; color: #111827;">Best Price </span>
-                        <a href="https://wa.me/917058260493" class="btn btn-primary"
-                            style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
-                    </div>
+            <!-- All Destinations Gallery (Mobile) -->
+            <div style="margin-top: 50px;" data-aos="fade-up">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                    <h2 style="font-size: 1.6rem; color: #111827; font-weight: 900; margin: 0;">Must-Visit Spots</h2>
                 </div>
-            </div>
 
-            <!-- Panjim Heritage -->
-            <div
-                style="background: var(--color-surface); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <img src="assets/panjim.png" alt="Panjim" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 24px;">
-                    <h3 style="color: var(--color-heading); margin-bottom: 8px;">Heritage Panjim</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 16px;">Fontainhas, Latin
-                        Quarter, Panjim Church & Altinho.</p>
-                    <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-main);">Best Price
-                        </span>
-                        <a href="https://wa.me/917058260493" class="btn btn-primary"
-                            style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dudhsagar Falls -->
-            <div
-                style="background: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <img src="assets/dudhsagar.png" alt="Dudhsagar" style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 24px;">
-                    <h3 style="color: #000; margin-bottom: 8px;">Dudhsagar Expedition</h3>
-                    <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 16px;">Jeep Safari, Waterfalls entry &
-                        Spice Plantation.</p>
-                    <hr style="border: 0; border-top: 1px solid #F3F4F6; margin: 20px 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: 700; font-size: 1.1rem; color: #111827;">Best Price </span>
-                        <a href="https://wa.me/917058260493" class="btn btn-primary"
-                            style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vagator Beach & Chapora Fort -->
-            <div
-                style="background: var(--color-surface); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <img src="assets/vagator.png" alt="Vagator Beach"
-                    style="width: 100%; height: 200px; object-fit: cover;">
-                <div style="padding: 24px;">
-                    <h3 style="color: var(--color-heading); margin-bottom: 8px;">Vagator & Chapora Fort</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 16px;">Iconic fort
-                        sunsets, red cliffs, and beautiful beaches.</p>
-                    <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 20px 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-main);">Best Price
-                        </span>
-                        <a href="https://wa.me/917058260493" class="btn btn-primary"
-                            style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- All Destinations Gallery -->
-            <div style="margin-top: 40px;">
-                <h2 style="font-size: 1.5rem; color: var(--color-heading); margin-bottom: 16px;">Must-Visit Spots</h2>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                    <div style="position: relative; height: 120px; border-radius: 16px; overflow: hidden;">
+                    <div
+                        style="position: relative; height: 160px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                         <img src="assets/anjuna.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Anjuna">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 8px; color: #111827; font-size: 0.8rem; font-weight: 600;">
-                            Anjuna</div>
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, transparent 60%);">
+                        </div>
+                        <div style="position: absolute; bottom: 16px; left: 16px; color: white;">
+                            <div style="font-size: 0.9rem; font-weight: 800; line-height: 1.2;">Anjuna</div>
+                            <div
+                                style="font-size: 0.65rem; color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 2px;">
+                                Beach</div>
+                        </div>
                     </div>
-                    <div style="position: relative; height: 120px; border-radius: 16px; overflow: hidden;">
+                    <div
+                        style="position: relative; height: 160px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                         <img src="assets/aguada.png" style="width: 100%; height: 100%; object-fit: cover;"
                             alt="Fort Aguada">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 8px; color: #111827; font-size: 0.8rem; font-weight: 600;">
-                            Fort Aguada</div>
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, transparent 60%);">
+                        </div>
+                        <div style="position: absolute; bottom: 16px; left: 16px; color: white;">
+                            <div style="font-size: 0.9rem; font-weight: 800; line-height: 1.2;">Fort Aguada</div>
+                            <div
+                                style="font-size: 0.65rem; color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 2px;">
+                                Heritage</div>
+                        </div>
                     </div>
-                    <div style="position: relative; height: 120px; border-radius: 16px; overflow: hidden;">
+                    <div
+                        style="position: relative; height: 160px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                         <img src="assets/basilica.png" style="width: 100%; height: 100%; object-fit: cover;"
                             alt="Old Goa">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 8px; color: #111827; font-size: 0.8rem; font-weight: 600;">
-                            Old Goa</div>
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, transparent 60%);">
+                        </div>
+                        <div style="position: absolute; bottom: 16px; left: 16px; color: white;">
+                            <div style="font-size: 0.9rem; font-weight: 800; line-height: 1.2;">Old Goa</div>
+                            <div
+                                style="font-size: 0.65rem; color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 2px;">
+                                Culture</div>
+                        </div>
                     </div>
-                    <div style="position: relative; height: 120px; border-radius: 16px; overflow: hidden;">
+                    <div
+                        style="position: relative; height: 160px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                         <img src="assets/calangute.png" style="width: 100%; height: 100%; object-fit: cover;"
                             alt="Calangute">
                         <div
-                            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 8px; color: #111827; font-size: 0.8rem; font-weight: 600;">
-                            Calangute</div>
+                            style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 24, 39, 0.8) 0%, transparent 60%);">
+                        </div>
+                        <div style="position: absolute; bottom: 16px; left: 16px; color: white;">
+                            <div style="font-size: 0.9rem; font-weight: 800; line-height: 1.2;">Calangute</div>
+                            <div
+                                style="font-size: 0.65rem; color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 2px;">
+                                Nightlife</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Premium Mobile Footer -->
-        <footer class="mobile-footer" style="background: #FFFFFF; padding: 50px 0 20px; color: #4B5563;">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <img src="assets/logo.png" alt="Near Taxi Logo" height="105" style="margin-bottom: 16px;">
-                    <p style="font-size: 0.9rem; line-height: 1.6; max-width: 280px; margin: 0 auto; color: #4B5563;">
-                        Experience the gold standard of travel in Goa. Professional, reliable, and premium taxi
-                        services 24/7.</p>
-                </div>
+        <!-- Elite Modern Mobile Footer -->
+        <footer class="mobile-footer"
+            style="background: linear-gradient(to bottom, #0B0F19, #111827); padding: 80px 0 120px; color: #94A3B8; position: relative;">
+            <!-- Premium Accent Top Bar -->
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, #FFD700, transparent); opacity: 0.6;">
+            </div>
 
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
-                    <div>
-                        <h4 style="color: #111827; font-size: 1rem; margin-bottom: 16px; font-weight: 700;">Services
-                        </h4>
-                        <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-                            <li><a href="services.html"
-                                    style="color: inherit; text-decoration: none; font-size: 0.85rem;">Airport
-                                    Transfers</a></li>
-                            <li><a href="tours.html"
-                                    style="color: inherit; text-decoration: none; font-size: 0.85rem;">Local
-                                    Sightseeing</a></li>
-                            <li><a href="tours.html"
-                                    style="color: inherit; text-decoration: none; font-size: 0.85rem;">Outstation
-                                    Trips</a></li>
-                        </ul>
+            <div class="container" style="padding: 0 24px;">
+                <!-- Brand Section -->
+                <div style="text-align: center; margin-bottom: 55px;">
+                    <div
+                        style="background: #FFFFFF; display: inline-flex; justify-content: center; align-items: center; padding: 15px 30px; border-radius: 20px; margin-bottom: 28px; box-shadow: 0 15px 40px rgba(0,0,0,0.4);">
+                        <img src="assets/logo.png" alt="Near Taxi Logo" height="52">
                     </div>
-                    <div>
-                        <h4 style="color: #111827; font-size: 1rem; margin-bottom: 16px; font-weight: 700;">Support
-                        </h4>
-                        <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-                            <li><a href="about.html"
-                                    style="color: inherit; text-decoration: none; font-size: 0.85rem;">About Us</a>
-                            </li>
-                            <li><a href="#" style="color: inherit; text-decoration: none; font-size: 0.85rem;">Contact
-                                    Us</a></li>
-                            <li><a href="#" style="color: inherit; text-decoration: none; font-size: 0.85rem;">Privacy
-                                    Policy</a></li>
-                        </ul>
+                    <p
+                        style="font-size: 0.95rem; line-height: 1.8; color: #94A3B8; max-width: 320px; margin: 0 auto 32px; font-weight: 500; letter-spacing: 0.2px;">
+                        The gold standard of travel in Goa. We blend luxury with reliability to ensure every mile of
+                        your journey is perfection.
+                    </p>
+                    <!-- Social Hub -->
+                    <div style="display: flex; justify-content: center; gap: 18px;">
+                        <a href="#"
+                            style="width: 52px; height: 52px; background: rgba(255,255,255,0.04); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                            <i class="ph-bold ph-facebook-logo" style="font-size: 1.3rem;"></i>
+                        </a>
+                        <a href="#"
+                            style="width: 52px; height: 52px; background: rgba(255,255,255,0.04); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                            <i class="ph-bold ph-instagram-logo" style="font-size: 1.3rem;"></i>
+                        </a>
+                        <a href="#"
+                            style="width: 52px; height: 52px; background: rgba(255,255,255,0.04); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                            <i class="ph-bold ph-whatsapp-logo" style="font-size: 1.3rem;"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- Links Grid -->
                 <div
-                    style="background: #F9FAFB; border-radius: 20px; padding: 24px; border: 1px solid #E5E7EB; margin-bottom: 40px;">
-                    <h4
-                        style="color: #111827; font-size: 1rem; margin-bottom: 20px; font-weight: 700; text-align: center;">
-                        Contact Details</h4>
-                    <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="display: flex; gap: 12px; align-items: flex-start;">
-                            <div
-                                style="width: 36px; height: 36px; background: #F3F4F6; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i class="ph-fill ph-map-pin" style="color: #F87171;"></i>
-                            </div>
-                            <span style="font-size: 0.85rem; line-height: 1.4;">H.No.103., A1 Village VARCA Church,
-                                margao, goa - 403721</span>
+                    style="display: grid; grid-template-columns: 1fr; gap: 35px; margin-bottom: 50px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                    <div>
+                        <h4
+                            style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 24px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase;">
+                            Quick Links</h4>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px;">
+                            <li><a href="index.html"
+                                    style="color: inherit; text-decoration: none; font-size: 0.95rem;">Home</a></li>
+                            <li><a href="about.html"
+                                    style="color: inherit; text-decoration: none; font-size: 0.95rem;">About us</a></li>
+                            <li><a href="services.html"
+                                    style="color: inherit; text-decoration: none; font-size: 0.95rem;">Services</a></li>
+                            <li><a href="tours.html"
+                                    style="color: #FFD700; text-decoration: none; font-size: 0.95rem; font-weight: 700;">popular
+                                    tours</a></li>
+                            <li><a href="contact.html"
+                                    style="color: inherit; text-decoration: none; font-size: 0.95rem;">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4
+                            style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 24px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase;">
+                            Direct Contact</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                            <a href="tel:+917058260493"
+                                style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 1.1rem; background: rgba(255,255,255,0.03); padding: 12px 24px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.1);">
+                                <i class="ph-fill ph-phone" style="color: #FFD700;"></i> +91 70582 60493
+                            </a>
                         </div>
-                        <a href="tel:+917058260493"
-                            style="display: flex; gap: 12px; align-items: center; color: inherit; text-decoration: none;">
-                            <div
-                                style="width: 36px; height: 36px; background: #F3F4F6; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i class="ph-fill ph-phone-call" style="color: #60A5FA;"></i>
-                            </div>
-                            <span style="font-size: 0.85rem;">+91 70582 60493</span>
-                        </a>
-                        <a href="mailto:purushottamnaiker8@gmail.com"
-                            style="display: flex; gap: 12px; align-items: center; color: inherit; text-decoration: none;">
-                            <div
-                                style="width: 36px; height: 36px; background: #F3F4F6; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i class="ph-fill ph-envelope-simple" style="color: #34D399;"></i>
-                            </div>
-                            <span style="font-size: 0.85rem; word-break: break-all;">purushottamnaiker8@gmail.com</span>
-                        </a>
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-                    <a href="#" style="font-size: 1.5rem; color: #4B5563;"><i class="ph-fill ph-facebook-logo"></i></a>
-                    <a href="#" style="font-size: 1.5rem; color: #4B5563;"><i class="ph-fill ph-instagram-logo"></i></a>
-                    <a href="#" style="font-size: 1.5rem; color: #4B5563;"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <!-- Trust Badge -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.03); padding: 10px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                        <i class="ph-fill ph-google-logo" style="color: #4285F4; font-size: 1.2rem;"></i>
+                        <span style="font-size: 0.85rem; color: #FFFFFF; font-weight: 600;">Top Rated on Google
+                            Business</span>
+                    </div>
                 </div>
 
-                <div style="text-align: center; border-top: 1px solid #E5E7EB; padding-top: 20px;">
-                    <p style="font-size: 0.75rem; color: #6B7280; margin: 0;">&copy; 2026 Near Taxi Goa. Crafted for
-                        Premium Excellence.</p>
-                </div>
+                <p
+                    style="text-align: center; font-size: 0.75rem; color: #4B5563; margin: 0; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                    &copy; 2026 NEAR TAXI GOA. ALL RIGHTS RESERVED.
+                </p>
             </div>
         </footer>
 
