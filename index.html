@@ -177,14 +177,14 @@
         </section>
 
         <!-- Why Choose Us Grid (Mobile Overhaul) -->
-        <section style="margin: 60px 0 40px; padding: 0;">
+        <section style="margin: 60px 0 40px; padding: 0;" data-aos="fade-up">
             <!-- <div class="section-header" style="justify-content: center; margin-bottom: 32px; text-align: center;">
                 <h2 style="color: #000; font-size: 1.8rem; font-weight: 800; line-height: 1.2;">The Near Taxi<br><span
                         class="text-accent" style="color: var(--color-primary);">Difference</span></h2>
             </div> -->
 
             <div class="mobile-choose-grid">
-                <div class="choose-card" data-aos="fade-up">
+                <div class="choose-card">
                     <div class="choose-icon-container safe">
                         <i class="ph-fill ph-shield-check"></i>
                     </div>
@@ -192,7 +192,7 @@
                     <p>Fully background-checked & professional drivers for your peace of mind.</p>
                 </div>
 
-                <div class="choose-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="choose-card">
                     <div class="choose-icon-container time">
                         <i class="ph-fill ph-clock"></i>
                     </div>
@@ -200,7 +200,7 @@
                     <p>We track your flight/train schedule to ensure zero waiting time.</p>
                 </div>
 
-                <div class="choose-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="choose-card">
                     <div class="choose-icon-container price">
                         <i class="ph-fill ph-tag"></i>
                     </div>
@@ -1842,21 +1842,7 @@
             }
         });
 
-        // Mobile Auto-Scroll for Why Choose Us
-        const scrollGrid = document.querySelector('.mobile-choose-grid');
-        if (scrollGrid) {
-            let scrollDir = 1;
-            setInterval(() => {
-                const maxScroll = scrollGrid.scrollWidth - scrollGrid.clientWidth;
-                if (scrollGrid.scrollLeft >= maxScroll - 10) scrollDir = -1;
-                if (scrollGrid.scrollLeft <= 10) scrollDir = 1;
-
-                scrollGrid.scrollBy({
-                    left: 292 * scrollDir,
-                    behavior: 'smooth'
-                });
-            }, 4000);
-        }
+        // Mobile Auto-Scroll for Why Choose Us removed based on user request to stop auto-scrolling
 
         // --- NEW: Premium Counter Animation ---
         const statsSection = document.querySelector('.mobile-stats-dashboard');
