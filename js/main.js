@@ -2,6 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Near Taxi Service Loaded');
+    // Preloader Logic with Fallback
+    const preloader = document.getElementById('preloader');
+    let isLoaded = false;
+
+    const removeLoader = () => {
+        if (!isLoaded && preloader) {
+            isLoaded = true;
+            preloader.classList.add('preloader-hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 600);
+        }
+    };
+
+    // Remove Premium Preloader when everything is fully loaded
+    window.addEventListener('load', removeLoader);
+
+    // Fallback: If network is extremely slow or broken assets hang the load event,
+    // force hide the loader after 7 seconds so the user isn't stuck forever.
+    setTimeout(removeLoader, 7000);
 
     // Check device type for logging/analytics
     const isMobile = window.innerWidth < 1024;

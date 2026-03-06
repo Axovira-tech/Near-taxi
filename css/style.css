@@ -336,3 +336,40 @@ button {
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
     border-radius: 0 2px 2px 0;
 }
+
+/* Premium Page Preloader */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-background);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.6s;
+}
+
+#preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-element {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 215, 0, 0.2);
+    border-top: 5px solid var(--color-primary);
+    border-radius: 50%;
+    animation: spinLoader 1s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+@keyframes spinLoader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

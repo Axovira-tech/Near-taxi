@@ -15,13 +15,18 @@
     <link rel="stylesheet" href="css/desktop.css">
 
     <!-- Icons (Phosphor Icons for modern look) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <!-- Animations (AOS) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Premium Preloader -->
+    <div id="preloader">
+        <div class="loader-element"></div>
+    </div>
+
     <!-- Premium Scroll Progress Indicator -->
     <div class="scroll-progress-bar" id="scrollIndicator"></div>
 
@@ -392,9 +397,7 @@
                         </h3>
                         <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Perfect
                             for solo or couple travel. Hatchbacks like Wagon R/Celerio.</p>
-                        <a href="https://wa.me/917058260493"
-                            style="display: inline-block; background: #111827; color: #FFD700; padding: 12px 28px; border-radius: 100px; font-weight: 800; text-decoration: none; font-size: 0.9rem; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">Starts
-                            at ₹999</a>
+
                     </div>
                 </div>
 
@@ -412,9 +415,7 @@
                         </h3>
                         <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Maximum
                             comfort for small families. Dzire/Amaze/Etios.</p>
-                        <a href="https://wa.me/917058260493"
-                            style="display: inline-block; background: #111827; color: #FFD700; padding: 12px 28px; border-radius: 100px; font-weight: 800; text-decoration: none; font-size: 0.9rem; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">Starts
-                            at ₹1299</a>
+
                     </div>
                 </div>
 
@@ -432,9 +433,7 @@
                             Ertiga</h3>
                         <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Spacious
                             for groups. Innova Crysta / Ertiga / Marazzo.</p>
-                        <a href="https://wa.me/917058260493"
-                            style="display: inline-block; background: #111827; color: #FFD700; padding: 12px 28px; border-radius: 100px; font-weight: 800; text-decoration: none; font-size: 0.9rem; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">Starts
-                            at ₹1899</a>
+
                     </div>
                 </div>
             </div>
@@ -1279,11 +1278,7 @@
                                     Perfect
                                     for solo or couple travel. Hatchbacks like Wagon R/Celerio.</p>
                             </div>
-                            <div>
-                                <span
-                                    style="display: inline-block; padding: 8px 16px; background: #111827; color: #FFFFFF; border-radius: 12px; font-weight: 600; font-size: 0.9rem;">Starts
-                                    at ₹999</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1305,11 +1300,7 @@
                                     Maximum
                                     comfort for small families. Dzire/Amaze/Etios.</p>
                             </div>
-                            <div>
-                                <span
-                                    style="display: inline-block; padding: 8px 16px; background: #111827; color: #FFFFFF; border-radius: 12px; font-weight: 600; font-size: 0.9rem;">Starts
-                                    at ₹1299</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1331,11 +1322,7 @@
                                     Spacious
                                     for groups. Innova Crysta / Ertiga / Marazzo.</p>
                             </div>
-                            <div>
-                                <span
-                                    style="display: inline-block; padding: 8px 16px; background: #111827; color: #FFFFFF; border-radius: 12px; font-weight: 600; font-size: 0.9rem;">Starts
-                                    at ₹1899</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1357,11 +1344,7 @@
                                     Premium
                                     travel experience. BMW/Mercedes/Audi Available.</p>
                             </div>
-                            <div>
-                                <span
-                                    style="display: inline-block; padding: 8px 16px; background: #FFD700; color: #111827; border-radius: 12px; font-weight: 700; font-size: 0.9rem;">Custom
-                                    Rates</span>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1839,11 +1822,14 @@
     <script src="js/lambo-data.js"></script>
     <script src="js/main.js?v=2.1"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        // Initialize AOS with faster speeds to avoid slow loading
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 500, // Reduced from 800 for snappier appearance
+                once: true,
+                offset: 50     // Trigger sooner when scrolling
+            });
+        }
 
         // Scroll Progress Bar Logic
         window.addEventListener('scroll', () => {
