@@ -19,6 +19,52 @@
 
     <!-- Animations (AOS) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Mobile-Specific Forced Layouts -->
+    <style>
+        @media (max-width: 1023px) {
+            #mobile-app .mobile-fleet-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 12px !important;
+                padding: 0 16px !important;
+                margin-top: 24px !important;
+                min-width: 0 !important;
+                justify-content: center !important;
+            }
+
+            #mobile-app .fleet-card-modern {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                background: #FFFFFF !important;
+                border-radius: 16px !important;
+                overflow: hidden !important;
+            }
+
+            #mobile-app .fleet-image-wrap {
+                width: 100% !important;
+                aspect-ratio: 4/3 !important;
+                position: relative !important;
+            }
+
+            #mobile-app .fleet-image-wrap img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            #mobile-app .fleet-info h3 {
+                font-size: 0.9rem !important;
+                margin-top: 10px !important;
+            }
+
+            #mobile-app .fleet-info p {
+                font-size: 0.7rem !important;
+                line-height: 1.2 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -382,70 +428,85 @@
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
+            <div class="mobile-fleet-grid">
                 <!-- Vehicle 1: Budget -->
                 <div class="fleet-card-modern">
                     <div class="fleet-image-wrap"
-                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
-                        <img src="assets/fleet_budget.png" alt="Budget Taxi"
-                            style="width: 100%; display: block; transition: transform 0.5s ease;">
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+                        <img src="assets/fleet_budget.png" alt="Budget Taxi">
                         <div class="fleet-type-tag"
-                            style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.9); padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; color: #111827; text-transform: uppercase;">
+                            style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 3px 10px; border-radius: 100px; font-size: 0.6rem; font-weight: 800; color: #111827; text-transform: uppercase;">
                             Economy</div>
                     </div>
-                    <div class="fleet-info" style="padding: 24px 0 0; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: #111827; font-weight: 900; margin-bottom: 6px;">Budget Taxi
+                    <div class="fleet-info" style="padding: 12px 0 0; text-align: center;">
+                        <h3 style="font-size: 0.95rem; color: #111827; font-weight: 800; margin-bottom: 2px;">Budget
+                            Taxi
                         </h3>
-                        <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Perfect
-                            for solo or couple travel. Hatchbacks like Wagon R/Celerio.</p>
-
+                        <p style="font-size: 0.7rem; color: #64748B; margin-bottom: 0; line-height: 1.3;">Wagon R /
+                            Celerio</p>
                     </div>
                 </div>
 
                 <!-- Vehicle 2: Sedan -->
                 <div class="fleet-card-modern">
                     <div class="fleet-image-wrap"
-                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
-                        <img src="assets/fleet_sedan.png" alt="Prime Sedan" style="width: 100%; display: block;">
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+                        <img src="assets/fleet_sedan.png" alt="Prime Sedan">
                         <div class="fleet-type-tag"
-                            style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.9); padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; color: #111827; text-transform: uppercase;">
+                            style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 3px 10px; border-radius: 100px; font-size: 0.6rem; font-weight: 800; color: #111827; text-transform: uppercase;">
                             Comfort</div>
                     </div>
-                    <div class="fleet-info" style="padding: 24px 0 0; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: #111827; font-weight: 900; margin-bottom: 6px;">Prime Sedan
+                    <div class="fleet-info" style="padding: 12px 0 0; text-align: center;">
+                        <h3 style="font-size: 0.95rem; color: #111827; font-weight: 800; margin-bottom: 2px;">Prime
+                            Sedan
                         </h3>
-                        <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Maximum
-                            comfort for small families. Dzire/Amaze/Etios.</p>
-
+                        <p style="font-size: 0.7rem; color: #64748B; margin-bottom: 0; line-height: 1.3;">Dzire / Amaze
+                            / Etios</p>
                     </div>
                 </div>
 
                 <!-- Vehicle 3: SUV -->
                 <div class="fleet-card-modern">
                     <div class="fleet-image-wrap"
-                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
-                        <img src="assets/fleet_suv.png" alt="SUV Ertiga" style="width: 100%; display: block;">
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+                        <img src="assets/fleet_suv.png" alt="SUV Ertiga">
                         <div class="fleet-type-tag"
-                            style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.9); padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; color: #111827; text-transform: uppercase;">
+                            style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 3px 10px; border-radius: 100px; font-size: 0.6rem; font-weight: 800; color: #111827; text-transform: uppercase;">
                             Family</div>
                     </div>
-                    <div class="fleet-info" style="padding: 24px 0 0; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: #111827; font-weight: 900; margin-bottom: 6px;">SUV /
+                    <div class="fleet-info" style="padding: 12px 0 0; text-align: center;">
+                        <h3 style="font-size: 0.95rem; color: #111827; font-weight: 800; margin-bottom: 2px;">SUV /
                             Ertiga</h3>
-                        <p style="font-size: 0.85rem; color: #64748B; margin-bottom: 20px; line-height: 1.5;">Spacious
-                            for groups. Innova Crysta / Ertiga / Marazzo.</p>
+                        <p style="font-size: 0.7rem; color: #64748B; margin-bottom: 0; line-height: 1.3;">Innova /
+                            Ertiga / Marazzo</p>
+                    </div>
+                </div>
 
+                <!-- Vehicle 4: Luxury -->
+                <div class="fleet-card-modern">
+                    <div class="fleet-image-wrap"
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+                        <img src="assets/fleet_luxury.png" alt="Luxury VIP">
+                        <div class="fleet-type-tag"
+                            style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 3px 10px; border-radius: 100px; font-size: 0.6rem; font-weight: 800; color: #111827; text-transform: uppercase;">
+                            Premium</div>
+                    </div>
+                    <div class="fleet-info" style="padding: 12px 0 0; text-align: center;">
+                        <h3 style="font-size: 0.95rem; color: #111827; font-weight: 800; margin-bottom: 2px;">Luxury /
+                            VIP</h3>
+                        <p style="font-size: 0.7rem; color: #64748B; margin-bottom: 0; line-height: 1.3;">BMW / Mercedes
+                            / Audi</p>
                     </div>
                 </div>
             </div>
 
             <!-- Explore Full Fleet Button -->
-            <div style="text-align: center; margin-top: 50px;">
+            <!-- <div style="text-align: center; margin-top: 50px;">
                 <a href="fleet.html"
                     style="display: inline-flex; align-items: center; gap: 12px; background: #111827; color: #FFFFFF; padding: 18px 40px; border-radius: 100px; font-weight: 800; text-decoration: none; font-size: 1rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
                     Explore More <i class="ph-bold ph-arrow-right" style="font-size: 1.2rem;"></i>
                 </a>
-            </div>
+            </div> -->
         </section>
 
         <!-- Premium Trust Statistics (Mobile Dashboard) -->
@@ -1351,14 +1412,14 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 50px;" data-aos="fade-up" data-aos-delay="500">
+            <!-- <div style="text-align: center; margin-top: 50px;" data-aos="fade-up" data-aos-delay="500">
                 <a href="services.html"
                     style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.1rem; padding: 16px 40px; border-radius: 50px; background: #111827; color: #FFFFFF; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"
                     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.3)';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 0, 0, 0.2)';">
                     Explore More <i class="ph-bold ph-arrow-right"></i>
                 </a>
-            </div>
+            </div> -->
         </section>
 
         <!-- Trust Statistics (Desktop) -->
