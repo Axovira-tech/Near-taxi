@@ -1,5 +1,27 @@
 // NEAR TAXI SERVICE - MAIN INTERACTION SCRIPT
 
+// Initialize AOS immediately as main.js is deferred and runs after aos.js
+// Initialize AOS with retry mechanism
+const initAOS = () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 600,
+            once: true,
+            offset: 50
+        });
+        AOS.refresh();
+        console.log('AOS Initialized');
+    } else {
+        // Retry a few times if AOS is not yet defined
+        setTimeout(initAOS, 100);
+    }
+};
+
+// Initial call
+initAOS();
+window.addEventListener('load', initAOS);
+
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Near Taxi Service Loaded');
     // Preloader Logic with Fallback
@@ -53,16 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
                             container: container,
                             renderer: 'svg',
                             loop: true,
-                            autoplay: true,
-                            path: lottiePath // Always use path for lazy fetching
+                            autoplay: true
                         };
+
+                        // Use global variable instead of path to avoid CORS issues on file:// protocol
+                        if (typeof lamborghiniAnimationData !== 'undefined') {
+                            animConfig.animationData = lamborghiniAnimationData;
+                        } else {
+                            animConfig.path = lottiePath;
+                        }
 
                         const anim = lottieLib.loadAnimation(animConfig);
 
                         // Force play if needed
                         anim.play();
 
-                        console.log(`${container.id} Lottie lazy-initialized from JSON`);
+                        const methodUsed = animConfig.animationData ? 'embedded data' : 'JSON fetch';
+                        console.log(`${container.id} Lottie lazy-initialized via ${methodUsed}`);
                         lottieObserver.unobserve(container);
                     } catch (err) {
                         console.error(`${container.id} Lottie Error:`, err);
@@ -150,13 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- AOS Refresh ---
-    // Recalculate AOS positions on load/resize just in case
-    window.addEventListener('load', () => {
-        if (typeof AOS !== 'undefined') {
-            AOS.refresh();
-        }
-    });
+
     // --- Active Nav Handling ---
     const handleActiveNav = () => {
         const path = window.location.pathname;

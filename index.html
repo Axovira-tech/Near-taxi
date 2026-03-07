@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <!-- Animations (AOS) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Mobile-Specific Forced Layouts -->
     <style>
@@ -1879,19 +1879,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
-    <script src="js/main.js?v=2.1" defer></script>
+    <script src="js/lambo-data.js" defer></script>
+    <script src="js/main.js?v=3.1" defer></script>
     <script>
-        // Initialize AOS with faster speeds to avoid slow loading
-        if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 500, // Reduced from 800 for snappier appearance
-                once: true,
-                offset: 50     // Trigger sooner when scrolling
-            });
-        }
-
         // Scroll Progress Bar Logic
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -1917,14 +1909,10 @@
                     const count = +counter.innerText;
                     const increment = target / speed;
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1);
-                    } else {
+                    if (count < target) { counter.innerText = Math.ceil(count + increment); setTimeout(updateCount, 1); } else {
                         counter.innerText = target;
                     }
-                };
-                updateCount();
+                }; updateCount();
             });
         };
 
@@ -1938,6 +1926,19 @@
             }, { threshold: 0.5 });
             observer.observe(statsSection);
         }
+    </script>
+    <script>
+        // Emergency Force AOS Initialization if main.js fails for any reason
+        document.addEventListener('DOMContentLoaded', () => {
+            const forceAOS = () => {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({ duration: 600, once: true, offset: 50 });
+                    AOS.refresh();
+                }
+            };
+            setTimeout(forceAOS, 1500); // 1.5s after DOM is ready
+            setTimeout(forceAOS, 5000); // 5s fallback for slow networks
+        });
     </script>
 </body>
 
