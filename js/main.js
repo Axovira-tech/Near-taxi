@@ -16,12 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Remove Premium Preloader when everything is fully loaded
+    // Remove Premium Preloader early for snappier experience
+    // We use a small timeout to ensure the browser has a chance to paint the initial layout
+    setTimeout(removeLoader, 800);
+
+    // Also remove on full load if it hasn't been removed yet
     window.addEventListener('load', removeLoader);
 
     // Fallback: If network is extremely slow or broken assets hang the load event,
-    // force hide the loader after 7 seconds so the user isn't stuck forever.
-    setTimeout(removeLoader, 7000);
+    // force hide the loader after 5 seconds so the user isn't stuck forever.
+    setTimeout(removeLoader, 5000);
 
     // Check device type for logging/analytics
     const isMobile = window.innerWidth < 1024;
@@ -49,22 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             container: container,
                             renderer: 'svg',
                             loop: true,
-                            autoplay: true
+                            autoplay: true,
+                            path: lottiePath // Always use path for lazy fetching
                         };
-
-                        // Use pre-loaded data if available (fixes file:// protocol issues)
-                        if (typeof lamborghiniAnimationData !== 'undefined') {
-                            animConfig.animationData = lamborghiniAnimationData;
-                        } else {
-                            animConfig.path = lottiePath;
-                        }
 
                         const anim = lottieLib.loadAnimation(animConfig);
 
                         // Force play if needed
                         anim.play();
 
-                        console.log(`${container.id} Lottie lazy-initialized`);
+                        console.log(`${container.id} Lottie lazy-initialized from JSON`);
                         lottieObserver.unobserve(container);
                     } catch (err) {
                         console.error(`${container.id} Lottie Error:`, err);
