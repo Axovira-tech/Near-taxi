@@ -1,4 +1,4 @@
-// NEAR TAXI SERVICE - MAIN INTERACTION SCRIPT
+// EVENT CABS SERVICE - MAIN INTERACTION SCRIPT
 
 // Initialize AOS immediately as main.js is deferred and runs after aos.js
 // Initialize AOS with retry mechanism
@@ -23,7 +23,7 @@ window.addEventListener('load', initAOS);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Near Taxi Service Loaded');
+    console.log('Event Cabs Service Loaded');
     // Preloader Logic with Fallback
     const preloader = document.getElementById('preloader');
     let isLoaded = false;
